@@ -1,10 +1,6 @@
+/* General */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -12,27 +8,484 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+a {
+	text-decoration: none;
+    color: gray;
+	transition: 0.3s ease;
+}
+a:hover {
+    color: black;
+}
+h4 {
+  margin-top: 0px;
+  font-weight: 150;
+}
+h1 ,h3 {
+  font-family: 'Lalezar';
+  color: black;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0px;
+}
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0px;
+}
+h3 {
+  font-size: 1rem;
+}
+p {
+	margin-top: 5px;
+	line-height: 1.5rem;
+}
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin-inline:auto;
+	justify-content: space-between;
+}
+.buttons {
+  width: 100px;
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  text-align: center;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* End General */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* Carousel */
+.title-container {
+  width: 1200px;
+  height: 60px;
+  font-size: 2.2rem;
+  font-weight: 200;
+  margin-top: 30px;
+}
+.wrapper {
+  margin: 0 1200px;
+}
+.carousel-container {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.carousel {
+  width: 1200px;
+  overflow: hidden;
+}
+.carousel-card-container {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 490px;
+  background-color: peachpuff;
+  width: 1200px;
+}
+.inner {
+  white-space: nowrap;
+  display: flex;
+  width: 1200px;
+}
+.clemo-title {
+  margin-bottom: 10%;
+  width: 100%;
+  top: 20%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 490px;
+  max-width: 100%;
+  flex-direction: column;
+}
+.carousel-item-text {
+  white-space: normal;
+  color: black;
+}
+.carousel-img {
+  width: 130px;
+  margin: 0 70px;
+}
+.carousel-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+
+}
+.button-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.indicators {
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.indicator-buttons {
+  border: none;
+  cursor: pointer;
+}
+.indicators > button {
+  margin: 5px;
+  background: none;
+}
+.image {
+  margin: 0 10px;
+}
+.carousel-item-comment{
+  text-align: start;
+  width: 600px;
+}
+.dot-navigation {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.dot-navigation__item {
+  border-radius: 9999px;
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: transparent;
+  border: 1px solid black;
+  margin: 0 0.25rem;
+}
+.dot-navigation__item--active {
+  background-color: black;
+}
+/* End Carousel */
+
+
+/* Header section */
+#header {
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 1vh;
+    background-color: white;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	padding: 0 10px;
+}
+#header .nav-list {
+    display: flex;
+    font-size: 18px;
+}
+.nav-list ul {
+    display: flex;
+    list-style: none;
+}
+.nav-list li {
+    margin: 10px;
+}
+/* End Header section */
+
+
+/* About section */
+#about {
+	background-color: white;
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#about .card hr {
+  height:2px;
+  width: 70px;
+  border-width:0;
+  background-color:black;
+}
+#about .carousel-card-container {
+  background-color: peachpuff;
+}
+#about .card-container {
+  width: 1200px;
+}
+#about .carousel-item-position {
+  font-weight: 250;
+  margin: 10px 0 0 0;
+}
+#about .carousel-item-text {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+#about .buttons{
+  border-color: black;
+  margin: 20px auto;
+}
+#about .buttons:hover {
+  background-color: white;
+  color: black;
+}
+#about .indicators {
+  display: grid;
+  height: 100px;
+  margin: 220px 5px 0 0;
+}
+#about .carousel-buttons {
+  background-color: peachpuff;
+}
+/* End About section */
+
+
+/* Service section */
+#service {
+	background-color: white;
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#service .buttons {
+  background-color: white;
+  color: black;
+  border-color: gray;
+  border-width: 2px;
+  border-style: solid;
+}
+#service .buttons:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.card-position{
+  display: flex;
+}
+.info-image {
+  padding: 10px;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: lightgray;
+  color: black;
+  margin: 25px;
+  text-align: start;
+}
+.info-card{
+  padding: 50px;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: black;
+  margin: 25px;
+  text-align: start;
+}
+.info-card hr {
+  height:1px;
+  width: 50px;
+  border-width:0;
+  background-color:black;
+  margin-inline-start: 0%;
+}
+/* End Service section */
+
+
+/* Work section */
+#work {
+	background-color: white;
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#work .container {
+  height: 900px;
+}
+#work .buttons{
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  margin: 20px auto;
+}
+#work .buttons:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+/* End Work section */
+
+
+/* Team section */
+#team {
+	background-color: peachpuff;
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#team .card hr {
+  height:1px;
+  width: 50px;
+  border-width:0;
+  background-color:black;
+}
+#team .carousel-item-position  {
+    margin: 0px;
+}
+#team .card-container {
+  display: flex;
+  width: 100%;
+}
+/* End Team section */
+
+
+/* Testimonials */
+#testimonials {
+	background-color: white;
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#testimonials .carousel-card-container {
+  background-color: white;
+}
+#testimonials .card {
+  flex-basis: 50%;
+  width: 1200px;
+  text-align: end;
+}
+#testimonials .card hr {
+  height:1px;
+  width: 50px;
+  border-width:0;
+  background-color:black;
+  margin-inline-end: 0%;
+}
+#testimonials .text {
+  flex-basis: 50%;
+  margin: 0 30px;
+}
+#testimonials .card-container {
+  display: flex;
+  width: 1200px;
+}
+#testimonials .img-container {
+  display: flex;
+  width: 1200px;
+  justify-content: center;
+}
+#testimonials .carousel-item-position {
+  margin: -10px 0;
+}
+ /* End Testimonials */
+
+
+ /* Footer section */
+.details {
+  background-color: black;
+  height: 550px;
+}
+ .rights-container {
+  background-color:  white;
+  height: 60px;
+  padding-top: 10px;
+ }
+#footer .container {
+  max-width: 100%;
+}
+ #footer .title-container {
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 3rem;
+  padding-top: 25px;
+ }
+
+ .details-container {
+  display: flex;
+  height: 100%;
+ }
+
+ .info-card {
+  flex-basis: 50%;
+ }
+
+ .socials {
+  margin-top: 20px;
+  display: flex;
+ }
+ .message-card {
+  margin-top: 10%;
+ }
+
+ input[type=text] {
+  display: block;
+  width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid gray;
+  outline: none;
+  color: gray;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+input[type=submit] {
+  width: 30%;
+  background-color: white;
+  color: black;
+  padding: 14px 20px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+  font-size: 1.2rem;
+}
+input[type=submit]:hover {
+  background-color: peachpuff;
+  color: black;
+}
+#footer .buttons {
+  background-color: white;
+  color: black;
+  margin-top: 30px;
+}
+#footer h3 {
+  margin: 30px 0;
+  font-size: 1.2rem;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.material-icons {
+  color: white;
+  margin-right: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rights-container .material-icons {
+  color: black;
+  margin-right: 0px;
 }
+ /* End Footer section */
